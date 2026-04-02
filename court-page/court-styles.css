@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f4f8;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grid container: 2 columns, 2 rows automatically */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Each rectangle */
+.court-box {
+  background-color: #475569;
+  color: white;
+  height: 150px;           /* Fixed height, same for all */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.court-box:hover {
+  background-color: #64748b;
+  transform: translateY(-5px);
+}
