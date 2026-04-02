@@ -3,64 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Sidebar Layout</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      display: flex;
-      height: 100vh;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 240px;
-      background-color: #1e293b;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-    }
-
-    /* Logo placeholder */
-    .logo {
-      height: 80px;
-      background-color: #334155;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    /* Buttons */
-    .nav-button {
-      padding: 12px;
-      margin-bottom: 10px;
-      border: none;
-      border-radius: 6px;
-      background-color: #475569;
-      color: white;
-      text-align: left;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .nav-button:hover {
-      background-color: #64748b;
-    }
-
-    /* Main content */
-    .content {
-      flex: 1;
-      padding: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -69,7 +12,7 @@
       LOGO
     </div>
 
-    <button class="nav-button">Button 1</button>
+    <button class="nav-button" onclick="openCourt()">Court</button>
     <button class="nav-button">Button 2</button>
     <button class="nav-button">Button 3</button>
   </div>
@@ -79,5 +22,6 @@
     <p>Your content goes here.</p>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
