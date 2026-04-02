@@ -1,4 +1,4 @@
 function openCourt() {
   // Opens a new tab/window
-  window.open("court.html", "_blank");
+  window.open("court%20page/court.html/court.html", "_blank");
 }
