@@ -8,9 +8,7 @@
 <body>
 
   <div class="sidebar">
-    <div class="logo">
-      LOGO
-    </div>
+    <div class="logo">LOGO</div>
 
     <button class="nav-button" onclick="openCourt()">Court</button>
     <button class="nav-button">2nd button</button>
@@ -20,39 +18,40 @@
   <div class="content">
     <h1>Admin Panel</h1>
 
-    <!-- Container for Adding New Players -->
-    <div class="player-container">
-      <h2>Add New Player</h2>
-      <form class="player-form">
-        <label for="player-name">Player Name:</label>
-        <input type="text" id="player-name" placeholder="Enter player name">
+    <div class="admin-containers">
+      <!-- Add New Player Container (Upper Left) -->
+      <div class="player-container add-player">
+        <h2>Add New Player</h2>
+        <form class="player-form">
+          <label for="player-name">Player Name:</label>
+          <input type="text" id="player-name" placeholder="Enter player name">
 
-        <label for="player-level">Player Level:</label>
-        <select id="player-level">
-          <option value="">Select level</option>
-          <option value="beginner">Beginner</option>
-          <option value="intermediate">Intermediate</option>
-          <option value="advanced">Advanced</option>
-          <option value="pro">Pro</option>
-        </select>
+          <label for="player-level">Player Level:</label>
+          <select id="player-level">
+            <option value="">Select level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="pro">Pro</option>
+          </select>
 
-        <button type="button" class="save-button">Save</button>
-      </form>
-    </div>
+          <button type="button" class="save-button">Save</button>
+        </form>
+      </div>
 
-    <!-- Container for Removing Players -->
-    <div class="player-container remove-player">
-      <h2>Remove Player (Going Home)</h2>
-      <form class="remove-form">
-        <label for="remove-name">Player Name:</label>
-        <input type="text" id="remove-name" placeholder="Enter player name">
+      <!-- Remove Player Container (Upper Right) -->
+      <div class="player-container remove-player">
+        <h2>Remove Player</h2>
+        <form class="remove-form">
+          <label for="remove-name">Player Name:</label>
+          <input type="text" id="remove-name" placeholder="Enter player name">
 
-        <button type="button" class="remove-button">Remove</button>
-      </form>
+          <button type="button" class="remove-button">Remove</button>
+        </form>
+      </div>
     </div>
 
   </div>
 
-  <script src="script.js"></script>
 </body>
 </html>

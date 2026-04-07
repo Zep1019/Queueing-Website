@@ -8,6 +8,7 @@
 body {
   display: flex;
   height: 100vh;
+  background-color: #f8fafc;
 }
 
 /* Sidebar */
@@ -20,7 +21,6 @@ body {
   padding: 20px;
 }
 
-/* Logo placeholder */
 .logo {
   height: 80px;
   background-color: #334155;
@@ -32,7 +32,7 @@ body {
   font-weight: bold;
 }
 
-/* Buttons */
+/* Sidebar buttons */
 .nav-button {
   padding: 12px;
   margin-bottom: 10px;
@@ -53,25 +53,33 @@ body {
 .content {
   flex: 1;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Player container (common for add/remove) */
+/* Containers wrapper */
+.admin-containers {
+  display: flex;
+  justify-content: space-between; /* left and right */
+  margin-top: 20px;
+}
+
+/* Player container (Add/Remove) */
 .player-container {
   background-color: #f0f4f8;
   padding: 20px;
-  border: 2px solid #64748b;
+  border: 2px solid #64748b; /* outline */
   border-radius: 8px;
-  margin-bottom: 30px;
-  max-width: 400px;
+  width: 48%; /* side by side */
 }
 
-/* Container headings */
+/* Headings */
 .player-container h2 {
   margin-bottom: 15px;
   color: #1e293b;
 }
 
-/* Player form */
+/* Forms */
 .player-form,
 .remove-form {
   display: flex;
@@ -110,15 +118,11 @@ body {
   background-color: #64748b;
 }
 
-.remove-player input {
-  margin-bottom: 15px;
-}
-
 .remove-button {
   padding: 12px;
   border: none;
   border-radius: 6px;
-  background-color: #dc2626; /* red */
+  background-color: #dc2626;
   color: white;
   cursor: pointer;
   font-weight: bold;
