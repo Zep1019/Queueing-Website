@@ -27,13 +27,12 @@ h1 {
   height: calc(100vh - 100px); /* full height minus header */
 }
 
-/* Queue Section (Right) */
-.queue-section {
-  flex: 1; /* smaller width */
+/* Courts Section (Left/Middle) */
+.courts-section {
+  flex: 3; /* wider than queue section */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 100%; /* fill the parent's height */
+  justify-content: flex-start; /* start from top */
 }
 
 /* Grid container for courts */
@@ -104,7 +103,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100%;
+  height: 100%; /* fill parent's height */
 }
 
 /* Up Next title stays on top */
