@@ -137,3 +137,24 @@ h1 {
   padding: 5px 0;
   text-align: center;
 }
+
+.done-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid #475569;
+  background-color: #fff;
+  color: #475569;
+}
+
+.timer {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1e293b;
+}
