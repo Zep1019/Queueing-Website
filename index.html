@@ -18,8 +18,24 @@
   </div>
 
   <div class="content">
-    <h1>Main Content Area</h1>
-    <p>Your content goes here.</p>
+    <h1>Admin Panel</h1>
+    <p>Input new player details:</p>
+
+    <form class="player-form">
+      <label for="player-name">Player Name:</label>
+      <input type="text" id="player-name" placeholder="Enter player name">
+
+      <label for="player-level">Player Level:</label>
+      <select id="player-level">
+        <option value="">Select level</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+        <option value="pro">Pro</option>
+      </select>
+
+      <button type="button" class="save-button">Save</button>
+    </form>
   </div>
 
   <script src="script.js"></script>
