@@ -21,19 +21,10 @@ h1 {
 }
 
 /* Layout: Courts on left, Queue on right */
-/* Layout: Courts on left, Queue on right */
 .content-container {
   display: flex;
   gap: 20px;
   height: calc(100vh - 100px); /* full height minus header */
-}
-
-/* Courts Section (Left/Middle) */
-.courts-section {
-  flex: 3; /* wider than queue section */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* start from top */
 }
 
 /* Queue Section (Right) */
@@ -45,6 +36,77 @@ h1 {
   height: 100%; /* fill the parent's height */
 }
 
+/* Grid container for courts */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Court boxes */
+.court-box {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #475569;
+  color: #475569;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 16px;
+  cursor: default;
+}
+
+/* Court title */
+.court-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Player slots inside each court (2x2 grid) */
+.court-players {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+/* Each player box inside court */
+.court-players div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #475569;
+  border-left: 1px solid #475569;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+/* Remove extra borders on top-left edges */
+.court-players div:nth-child(1),
+.court-players div:nth-child(2) {
+  border-top: none;
+}
+
+.court-players div:nth-child(1),
+.court-players div:nth-child(3) {
+  border-left: none;
+}
+
+/* Queue Section (Right) */
+.queue-section {
+  flex: 1; /* smaller width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
 /* Up Next title stays on top */
 .queue-section h2 {
   color: #475569;
@@ -52,7 +114,7 @@ h1 {
   text-align: center;
 }
 
-/* Queue Box Outline fills remaining height */
+/* Queue Box Outline */
 .queue-box {
   border: 2px solid #475569;
   border-radius: 0;
