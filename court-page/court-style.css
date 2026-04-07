@@ -29,6 +29,7 @@ h1 {
   align-items: center;
   justify-content: center;
 
+  border-radius: 0;      /* sharp corners */
   font-size: 20px;
-  cursor: default; /* no pointer since no interaction */
+  cursor: default;
 }
