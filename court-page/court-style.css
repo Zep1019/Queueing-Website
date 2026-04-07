@@ -1,15 +1,18 @@
+/* General Page */
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
   background-color: #f0f4f8;
+  margin: 0;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  color: #1e293b;
 }
 
-/* Grid container */
+/* Grid container for courts */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -24,41 +27,54 @@ h1 {
   background-color: transparent;
   border: 2px solid #475569;
   color: #475569;
-  height: 150px;
-
+  height: 180px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  flex-direction: column;
+  justify-content: flex-start;
   border-radius: 0;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 16px;
   cursor: default;
 }
 
-/* Cross lines */
-.court-box::before {
-  content: "";
-  position: absolute;
-  width: 2px;
+/* Court title */
+.court-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Player slots inside each court (2x2 grid) */
+.court-players {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   height: 100%;
-  background-color: #475569;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-.court-box::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: #475569;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+/* Each player box inside court */
+.court-players div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #475569;
+  border-left: 1px solid #475569;
+  font-size: 14px;
+  color: #1e293b;
 }
 
-/* ✅ Footer section */
+/* Remove extra borders on top-left edges */
+.court-players div:nth-child(1),
+.court-players div:nth-child(2) {
+  border-top: none;
+}
+
+.court-players div:nth-child(1),
+.court-players div:nth-child(3) {
+  border-left: none;
+}
+
+/* Footer Section - Up Next Queue */
 .footer-queue {
   margin-top: 40px;
   display: flex;
@@ -76,17 +92,30 @@ h1 {
   color: #475569;
 }
 
-/* Same outline style as courts */
+/* Queue Box Outline */
 .queue-box {
   border: 2px solid #475569;
   border-radius: 0;
   padding: 20px;
   min-height: 60px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: #475569;
-  font-size: 18px;
+  font-size: 16px;
+  flex-direction: column;
+}
+
+/* Optional: Queue list styling */
+.queue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.queue-list li {
+  border-bottom: 1px solid #cbd5e1;
+  padding: 5px 0;
+  text-align: center;
 }
