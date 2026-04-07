@@ -20,6 +20,7 @@ h1 {
 
 /* Each rectangle */
 .court-box {
+  position: relative;            /* required for positioning lines */
   background-color: transparent;
   border: 2px solid #475569;
   color: #475569;
@@ -29,7 +30,31 @@ h1 {
   align-items: center;
   justify-content: center;
 
-  border-radius: 0;      /* sharp corners */
+  border-radius: 0;
   font-size: 20px;
   cursor: default;
+}
+
+/* Vertical line */
+.court-box::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #475569;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Horizontal line */
+.court-box::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #475569;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
