@@ -20,19 +20,16 @@ h1 {
 
 /* Each rectangle */
 .court-box {
-  background-color: #475569;
-  color: white;
-  height: 150px;           /* Fixed height, same for all */
+  background-color: transparent;
+  border: 2px solid #475569;
+  color: #475569;
+  height: 150px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 10px;
   font-size: 20px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.court-box:hover {
-  background-color: #64748b;
-  transform: translateY(-5px);
+  cursor: default; /* no pointer since no interaction */
 }
