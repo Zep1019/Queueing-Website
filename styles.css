@@ -55,21 +55,38 @@ body {
   padding: 20px;
 }
 
-/* Player form */
-.player-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+/* Player container (common for add/remove) */
+.player-container {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border: 2px solid #64748b;
+  border-radius: 8px;
+  margin-bottom: 30px;
   max-width: 400px;
 }
 
-.player-form label {
+/* Container headings */
+.player-container h2 {
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+/* Player form */
+.player-form,
+.remove-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-form label,
+.remove-form label {
   margin-bottom: 5px;
   font-weight: bold;
 }
 
 .player-form input,
-.player-form select {
+.player-form select,
+.remove-form input {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #64748b;
@@ -77,6 +94,7 @@ body {
   font-size: 14px;
 }
 
+/* Buttons */
 .save-button {
   padding: 12px;
   border: none;
@@ -90,4 +108,23 @@ body {
 
 .save-button:hover {
   background-color: #64748b;
+}
+
+.remove-player input {
+  margin-bottom: 15px;
+}
+
+.remove-button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #dc2626; /* red */
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.remove-button:hover {
+  background-color: #b91c1c;
 }

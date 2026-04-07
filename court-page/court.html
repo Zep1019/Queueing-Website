@@ -2,85 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Court Page</title>
-  <link rel="stylesheet" href="court-style.css">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="main-container">
 
-    <div class="content-container">
-      <!-- Courts Grid (Left/Middle) -->
-      <div class="courts-section">
-        <div class="grid-container">
-          <!-- Court 1 -->
-          <div class="court-box" data-court="1">
-            <button class="done-btn">DONE</button>
-            <div class="timer">00:00</div>
-            <div class="court-title">Court 1</div>
-            <div class="court-players">
-              <div>Player A</div>
-              <div>Player B</div>
-              <div>Player C</div>
-              <div>Player D</div>
-            </div>
-          </div>
-
-          <!-- Court 2 -->
-          <div class="court-box" data-court="2">
-            <button class="done-btn">DONE</button>
-            <div class="timer">00:00</div>
-            <div class="court-title">Court 2</div>
-            <div class="court-players">
-              <div>Empty</div>
-              <div>Empty</div>
-              <div>Empty</div>
-              <div>Empty</div>
-            </div>
-          </div>
-
-          <!-- Court 3 -->
-          <div class="court-box" data-court="3">
-            <button class="done-btn">DONE</button>
-            <div class="timer">00:00</div>
-            <div class="court-title">Court 3</div>
-            <div class="court-players">
-              <div>Empty</div>
-              <div>Empty</div>
-              <div>Empty</div>
-              <div>Empty</div>
-            </div>
-          </div>
-
-          <!-- Court 4 -->
-          <div class="court-box" data-court="4">
-            <button class="done-btn">DONE</button>
-            <div class="timer">00:00</div>
-            <div class="court-title">Court 4</div>
-            <div class="court-players">
-              <div>Empty</div>
-              <div>Empty</div>
-              <div>Empty</div>
-              <div>Empty</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Up Next Panel (Right) -->
-      <div class="queue-section">
-        <h2>Up Next</h2>
-        <div class="queue-box">
-          <ul class="queue-list">
-            <li>Team E vs Team F</li>
-            <li>Team G vs Team H</li>
-            <li>Team I vs Team J</li>
-          </ul>
-        </div>
-      </div>
+  <div class="sidebar">
+    <div class="logo">
+      LOGO
     </div>
+
+    <button class="nav-button" onclick="openCourt()">Court</button>
+    <button class="nav-button">2nd button</button>
+    <button class="nav-button">Button 3</button>
   </div>
 
-  <!-- Link to external JS file -->
-  <script src="court-script.js"></script>
+  <div class="content">
+    <h1>Admin Panel</h1>
+
+    <!-- Container for Adding New Players -->
+    <div class="player-container">
+      <h2>Add New Player</h2>
+      <form class="player-form">
+        <label for="player-name">Player Name:</label>
+        <input type="text" id="player-name" placeholder="Enter player name">
+
+        <label for="player-level">Player Level:</label>
+        <select id="player-level">
+          <option value="">Select level</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+          <option value="pro">Pro</option>
+        </select>
+
+        <button type="button" class="save-button">Save</button>
+      </form>
+    </div>
+
+    <!-- Container for Removing Players -->
+    <div class="player-container remove-player">
+      <h2>Remove Player (Going Home)</h2>
+      <form class="remove-form">
+        <label for="remove-name">Player Name:</label>
+        <input type="text" id="remove-name" placeholder="Enter player name">
+
+        <button type="button" class="remove-button">Remove</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
