@@ -9,7 +9,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Grid container: 2 columns, 2 rows automatically */
+/* Grid container */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -18,9 +18,9 @@ h1 {
   margin: 0 auto;
 }
 
-/* Each rectangle */
+/* Court boxes */
 .court-box {
-  position: relative;            /* required for positioning lines */
+  position: relative;
   background-color: transparent;
   border: 2px solid #475569;
   color: #475569;
@@ -35,7 +35,7 @@ h1 {
   cursor: default;
 }
 
-/* Vertical line */
+/* Cross lines */
 .court-box::before {
   content: "";
   position: absolute;
@@ -47,7 +47,6 @@ h1 {
   transform: translateX(-50%);
 }
 
-/* Horizontal line */
 .court-box::after {
   content: "";
   position: absolute;
@@ -57,4 +56,37 @@ h1 {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* ✅ Footer section */
+.footer-queue {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.queue-container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.queue-container h2 {
+  margin-bottom: 10px;
+  color: #475569;
+}
+
+/* Same outline style as courts */
+.queue-box {
+  border: 2px solid #475569;
+  border-radius: 0;
+  padding: 20px;
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #475569;
+  font-size: 18px;
 }
